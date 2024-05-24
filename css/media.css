@@ -1,0 +1,347 @@
+/* ===> media Query <=== */
+
+
+/* ******************************************** */
+/* ===> nav <=== */
+/*^========> Navbar <========*/
+
+@media (min-width: 1201px) {
+
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .nav-links {
+        transform: translateX(0);
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        z-index: 999;
+        width: 350px;
+        height: 100%;
+        background-color: var(--white);
+        flex-direction: row;
+        transition: transform 400ms;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    nav .nav-links {
+        transform: translateX(100%);
+        position: absolute;
+        z-index: 999;
+        width: 350px;
+        height: 100%;
+        background-color: var(--white);
+        border-left: 2px solid var(--white);
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        transition: transform 400ms;
+    }
+
+    nav .nav-links .close-icon {
+        display: block;
+        padding: 10px 15px 5px;
+    }
+
+    nav .nav-links a:not(.active):hover::before {
+        width: 0px;
+    }
+
+    nav .nav-links a {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    nav .nav-links a::before {
+        bottom: 2px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .mode-group {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+
+/* ******************************************** */
+/* ===> header <=== */
+
+@media (min-width: 1024px) {
+    .header__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .header__img {
+        width: calc(calc(100% - 2rem) / 2);
+    }
+
+    .header__content {
+        width: calc(calc(100% - 2rem) / 2);
+        margin: 0;
+        text-align: left;
+
+        p {
+            margin-left: 0;
+        }
+
+    }
+
+    .main-header-btn {
+        --border-radius: 0px 100vh 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .header__img {
+        width: calc(calc(100% - 2rem) / 2);
+    }
+
+    .header__content {
+        width: calc(calc(100% - 2rem) / 2);
+        margin: 0;
+        text-align: left;
+
+        p {
+            margin-left: 0;
+        }
+    }
+
+    .main-header-btn {
+        --border-radius: 0px 100vh 100vh;
+    }
+}
+
+
+
+/* ******************************************** */
+/* ===> chef <=== */
+
+@media (min-width: 992px) {
+    .chefs-cards {
+        flex-wrap: nowrap;
+
+        .card {
+            width: calc(calc(100% - 2rem) / 3);
+        }
+    }
+
+    .card-img__img::before {
+        bottom: 170px;
+    }
+}
+
+@media (min-width: 768px) {
+    .chefs-cards .card {
+        width: calc(calc(100% - 2rem) / 2);
+    }
+}
+
+
+/*^========> Gallery <========*/
+@media (min-width: 1201px) {
+    .gallery-photos {
+        max-height: 1100px;
+
+        .pizza,
+        .pizza-slices,
+        .steak,
+        .omelette,
+        .burger,
+        .fried,
+        .kofta {
+            width: calc(calc(100% - 2rem) / 3);
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .gallery-photos {
+        max-height: 845px;
+
+        .pizza,
+        .pizza-slices,
+        .steak,
+        .omelette,
+        .burger,
+        .fried,
+        .kofta {
+            width: calc(calc(100% - 2rem * 2) / 3);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .gallery-photos {
+        max-height: 1600px;
+
+        .pizza,
+        .pizza-slices,
+        .steak,
+        .omelette,
+        .burger,
+        .fried,
+        .kofta {
+            width: calc(calc(100% - 2rem * 2) / 2);
+        }
+    }
+
+    .gallery .pizza {
+        order: 1;
+    }
+
+    .gallery .fried {
+        order: 6;
+    }
+
+    .gallery .omelette {
+        order: 4;
+    }
+
+    .gallery .kofta {
+        order: 7;
+    }
+
+    .gallery .burger {
+        order: 2;
+    }
+
+    .gallery .pizza-slices {
+        order: 3;
+    }
+
+    .gallery .steak {
+        order: 5;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .gallery-photos {
+        height: auto;
+        flex-wrap: wrap;
+
+        .pizza,
+        .pizza-slices,
+        .steak,
+        .omelette,
+        .burger,
+        .fried,
+        .kofta {
+            width: 100%;
+        }
+    }
+}
+
+
+/*^========> Contacts <========*/
+@media (min-width: 992px) {
+
+    .contact-content .contact-info {
+
+        .address,
+        .email,
+        .phone,
+        .opening-hours {
+            width: calc(calc(100% - 1.875rem) / 2);
+        }
+    }
+
+    .input-group input {
+        width: calc(calc(100% - 1.8rem) / 2) !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .address,
+    .email,
+    .phone,
+    .opening-hours,
+    .input-group {
+        width: 100%;
+    }
+
+}
+
+
+/*^========> Footer <========*/
+@media (min-width: 1201px) {
+
+    footer .container {
+        padding: 40px 5px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .about,
+        .contact-details {
+            width: calc(calc(100% - 1.875rem) / 4) !important;
+        }
+
+        .subscription {
+            width: calc(calc(100% - 1.875rem) / 2) !important;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    footer .container {
+
+        .about,
+        .contact-details {
+            width: calc(calc(100% - 1.875rem) / 2) !important;
+            order: 1;
+        }
+
+        .subscription {
+            width: 100%;
+            order: 2;
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    footer .container {
+
+        .about,
+        .contact-details,
+        .subscription {
+            width: 100%;
+        }
+    }
+}
